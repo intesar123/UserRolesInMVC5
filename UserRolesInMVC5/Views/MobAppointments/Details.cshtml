@@ -1,0 +1,35 @@
+﻿@model HospMgmt.Models.MobAppointment
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MobAppointment</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.mobnum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.mobnum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.isverified)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.isverified)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
