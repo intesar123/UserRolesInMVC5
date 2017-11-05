@@ -15,6 +15,7 @@ namespace HospMgmt.Models
         [Required(ErrorMessage ="Mobile Number is required!")]
        public string mobnum { get; set; }
        public bool isverified { get; set; }
+        public string isdcode { get; set; }
     }
 
     public class AppointmentDbContext : DbContext

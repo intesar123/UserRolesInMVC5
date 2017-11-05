@@ -81,6 +81,7 @@ namespace HospMgmt.Migrations
                      ID = c.Int(nullable: false),
                      Mobile = c.String(nullable: true),
                      IsVerified = c.Boolean(nullable: true),
+                     isdcode= c.String(nullable: true),
                  })
             .PrimaryKey(t=>t.ID);
             
@@ -103,6 +104,7 @@ namespace HospMgmt.Migrations
             DropTable("dbo.AspNetUsers");
             DropTable("dbo.AspNetUserRoles");
             DropTable("dbo.AspNetRoles");
+            DropTable("dbo.MobAppointment");
         }
     }
 }
