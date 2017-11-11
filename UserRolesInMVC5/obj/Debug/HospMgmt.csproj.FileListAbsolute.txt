@@ -69,6 +69,9 @@ c:\users\intesaralam\documents\visual studio 2015\Projects\HospMgmt\obj\Debug\Ho
 c:\users\intesaralam\documents\visual studio 2015\Projects\HospMgmt\obj\Debug\HospMgmt.pdb
 C:\Users\intesarAlam\Documents\Visual Studio 2015\Projects\HospMgmt\obj\Debug\HospMgmt.Migrations.InitialCreate.resources
 C:\Users\intesarAlam\Documents\Visual Studio 2015\Projects\HospMgmt\obj\Debug\HospMgmt.csproj.GenerateResource.Cache
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\obj\Debug\HospMgmt.Migrations.InitialCreate.resources
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\obj\Debug\HospMgmt.Migrations.addfnamefield.resources
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\obj\Debug\HospMgmt.csproj.GenerateResource.Cache
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\HospMgmt.dll.config
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\HospMgmt.dll
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\HospMgmt.pdb
@@ -121,6 +124,10 @@ C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\roslyn
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\roslyn\VBCSCompiler.exe
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\roslyn\VBCSCompiler.exe.config
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\Antlr3.Runtime.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\CrystalDecisions.CrystalReports.Engine.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\CrystalDecisions.ReportSource.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\CrystalDecisions.Shared.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\CrystalDecisions.Web.dll
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\EntityFramework.dll
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\EntityFramework.SqlServer.dll
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\Microsoft.AspNet.Identity.Core.dll
@@ -136,6 +143,7 @@ C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\Micros
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\Microsoft.Owin.Security.OAuth.dll
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\Microsoft.ReportViewer.WebForms.dll
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\Microsoft.Web.Infrastructure.dll
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\Newtonsoft.Json.dll
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\Owin.dll
@@ -147,6 +155,20 @@ C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\System
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\System.Web.WebPages.dll
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\System.Web.WebPages.Razor.dll
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\WebGrease.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\CrystalDecisions.ReportAppServer.DataDefModel.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\CrystalDecisions.ReportAppServer.ClientDoc.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\CrystalDecisions.ReportAppServer.ReportDefModel.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\CrystalDecisions.ReportAppServer.Controllers.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\CrystalDecisions.ReportAppServer.CommLayer.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\CrystalDecisions.ReportAppServer.DataSetConversion.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\CrystalDecisions.ReportAppServer.Prompting.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\CrystalDecisions.ReportAppServer.XmlSerialize.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\CrystalDecisions.ReportAppServer.CubeDefModel.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\CrystalDecisions.ReportAppServer.CommonObjectModel.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\CrystalDecisions.ReportAppServer.ObjectFactory.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\CrystalDecisions.ReportAppServer.CommonControls.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\stdole.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\Microsoft.SqlServer.Types.dll
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\Antlr3.Runtime.pdb
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\EntityFramework.xml
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\EntityFramework.SqlServer.xml
@@ -171,9 +193,16 @@ C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\System
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\System.Web.WebPages.xml
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\System.Web.WebPages.Deployment.xml
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\System.Web.WebPages.Razor.xml
-C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\obj\Debug\HospMgmt.csprojResolveAssemblyReference.cache
-C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\obj\Debug\HospMgmt.Migrations.InitialCreate.resources
-C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\obj\Debug\HospMgmt.csproj.GenerateResource.Cache
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\de\Microsoft.SqlServer.Types.resources.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\es\Microsoft.SqlServer.Types.resources.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\fr\Microsoft.SqlServer.Types.resources.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\it\Microsoft.SqlServer.Types.resources.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\ja\Microsoft.SqlServer.Types.resources.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\ko\Microsoft.SqlServer.Types.resources.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\pt\Microsoft.SqlServer.Types.resources.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\ru\Microsoft.SqlServer.Types.resources.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\zh-Hans\Microsoft.SqlServer.Types.resources.dll
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\zh-Hant\Microsoft.SqlServer.Types.resources.dll
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\obj\Debug\HospMgmt.dll
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\obj\Debug\HospMgmt.pdb
-C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\obj\Debug\HospMgmt.Migrations.addfnamefield.resources
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\obj\Debug\HospMgmt.csprojResolveAssemblyReference.cache
