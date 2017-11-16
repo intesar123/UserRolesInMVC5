@@ -279,10 +279,12 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\edit.ico" />
     <Content Include="images\hosp1.jpg" />
     <Content Include="images\hosp2.jpg" />
     <Content Include="images\hosp3.jpg" />
     <Content Include="images\hosp4.jpg" />
+    <Content Include="images\pen.png" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -305,8 +307,13 @@
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <None Include="Scripts\jquery-3.2.1.intellisense.js" />
+    <Content Include="Pencil.ico" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\colorpicker\jquery.colorpicker.bygiro.css" />
+    <Content Include="Scripts\colorpicker\jquery.colorpicker.bygiro.js" />
+    <Content Include="Scripts\colorpicker\jquery.colorpicker.bygiro.min.css" />
+    <Content Include="Scripts\colorpicker\jquery.colorpicker.bygiro.min.js" />
     <Content Include="Scripts\i18n\i18n.html" />
     <Content Include="Scripts\i18n\jquery.ui.timepicker-cs.js" />
     <Content Include="Scripts\i18n\jquery.ui.timepicker-de.js" />
