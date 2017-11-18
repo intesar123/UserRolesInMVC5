@@ -232,6 +232,13 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Index.aspx.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.cs">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\201610301538522_InitialCreate.cs" />
     <Compile Include="Migrations\201610301538522_InitialCreate.Designer.cs">
       <DependentUpon>201610301538522_InitialCreate.cs</DependentUpon>
@@ -285,6 +292,7 @@
     <Content Include="images\hosp3.jpg" />
     <Content Include="images\hosp4.jpg" />
     <Content Include="images\pen.png" />
+    <Content Include="Index.aspx" />
     <Content Include="packages.config" />
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

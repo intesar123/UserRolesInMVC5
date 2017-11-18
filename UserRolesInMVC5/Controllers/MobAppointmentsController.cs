@@ -59,6 +59,8 @@ namespace HospMgmt.Controllers
             return View(mobAppointment);
         }
 
+
+
         // GET: MobAppointments/Edit/5
         public ActionResult Edit(int? id)
         {
