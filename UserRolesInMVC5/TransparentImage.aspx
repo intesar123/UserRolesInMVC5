@@ -13,17 +13,20 @@
     <style>
         #myCanvas {
             cursor: pointer;
-
         }
     </style>
     <script>
+        var startpaint = 0;
         $(document).ready(function () {
-            OrginalWidthHeight();
-            initialize();
+            // OrginalWidthHeight();
+            // initialize();
             $('.myColorPicker').colorPickerByGiro({
                 preview: '.myColorPicker-preview'
             });
-            
+            $("#btnpaint").click(function () {
+                initialize();
+
+            });
             $(".btn-close").on('click', function () {
                 var sigCanvas = document.getElementById("myCanvas");
                 var context = sigCanvas.getContext("2d");
@@ -45,9 +48,18 @@
             return { X: x - sigCanvas.offsetLeft, Y: y - sigCanvas.offsetTop };
         }
 
-      
+
 
         function initialize() {
+            if (startpaint == 0)
+            {
+                startpaint = 1;
+            }
+            else
+            {
+                startpaint = 0;
+            }
+
             // get references to the canvas element as well as the 2D drawing context
             var sigCanvas = document.getElementById("myCanvas");
             var context = sigCanvas.getContext("2d");
@@ -109,6 +121,7 @@
                 function draws(event) {
                     // console.log(event);
                     //event.preventDefault();
+                    
 
                     if (event.targetTouches[0] != undefined) {
                         var pos = findPos(this);
@@ -116,8 +129,8 @@
                         var b = e.pageY - pos.y;
 
                         var coors = {
-                            x:a,
-                            y:b
+                            x: a,
+                            y: b
                         };
 
                         var obj = sigCanvas;
@@ -156,32 +169,39 @@
             }
             else {
 
+
                 // start drawing when the mousedown event fires, and attach handlers to
                 // draw a line to wherever the mouse moves to
+                
                 $("#myCanvas").mousedown(function (mouseEvent) {
-                   //---- var position = getPosition(mouseEvent, sigCanvas);
+                    if (startpaint == 1) {
+                       
+                    }
+                    else {
+                        return false;
+                    }
+                        //---- var position = getPosition(mouseEvent, sigCanvas);
+                        var pos = findPos(this);
+                        var x = mouseEvent.pageX - pos.x;
+                        var y = mouseEvent.pageY - pos.y;
+                        $('#status').html("x=" + x + " y=" + y);
+                        var c = this.getContext('2d');
+                        var p = c.getImageData(x, y, 1, 1).data;
+                        var hex = "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);
+                        $("#imgcolorpreview").css("background-color", hex);
+                        context.moveTo(x, y);
+                        context.beginPath();
 
-                    var pos = findPos(this);
-                    var x = mouseEvent.pageX - pos.x;
-                    var y = mouseEvent.pageY - pos.y;
-                    $('#status').html("x="+x + " y=" + y);
-                    var c = this.getContext('2d');
-                    var p = c.getImageData(x, y, 1, 1).data;
-                    var hex = "#" + ("000000" + rgbToHex(p[0], p[1], p[2])).slice(-6);
-                    $("#imgcolorpreview").css("background-color", hex);
-                    context.moveTo(x, y);
-                    context.beginPath();
-
-                    // attach event handlers
-                    $(this).mousemove(function (mouseEvent) {
-                        drawLine(mouseEvent, sigCanvas, context);
-                    }).mouseup(function (mouseEvent) {
-                        finishDrawing(mouseEvent, sigCanvas, context);
-                    }).mouseout(function (mouseEvent) {
-                        finishDrawing(mouseEvent, sigCanvas, context);
+                        // attach event handlers
+                        $(this).mousemove(function (mouseEvent) {
+                            drawLine(mouseEvent, sigCanvas, context);
+                        }).mouseup(function (mouseEvent) {
+                            finishDrawing(mouseEvent, sigCanvas, context);
+                        }).mouseout(function (mouseEvent) {
+                            finishDrawing(mouseEvent, sigCanvas, context);
+                        });
                     });
-                });
-
+                
             }
         }
 
@@ -191,7 +211,7 @@
             var pos = findPos(sigCanvas);
             var x = mouseEvent.pageX - pos.x;
             var y = mouseEvent.pageY - pos.y;
-          //----  var position = getPosition(mouseEvent, sigCanvas);
+            //----  var position = getPosition(mouseEvent, sigCanvas);
             //alert(x+" "+y);
             context.lineTo(x, y);
             context.stroke();
@@ -226,14 +246,12 @@
                 var reader = new FileReader();
 
                 reader.onload = function (e) {
-
-                    var canvas = document.getElementById("myCanvas");
-
-                    var ctx = canvas.getContext("2d");
-
                     var image = new Image();
-
                     image.onload = function () {
+                        var canvas = document.getElementById("myCanvas");
+                        canvas.width = this.width;
+                        canvas.height = this.height;
+                        var ctx = canvas.getContext("2d");
 
                         //alert(this.width + " " + this.height);
                         ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
@@ -279,27 +297,36 @@
             var oldCanvas = canvas.toDataURL("image/png");
             var img = new Image();
             img.src = oldCanvas;
-          
+
             var axistozoom = $("#zoomaxis").val();
             if (id == 'reset') {
-                img.onload = function () {
-                    canvas.height = 750;
-                    canvas.width = 750;
-                    
-                    ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
+                var input = document.getElementById("imgfile");
+                if (input.files && input.files[0]) {
+                    var reader = new FileReader();
+
+                    reader.onload = function (e) {
+                        var image = new Image();
+                        image.onload = function () {
+                            var canvas = document.getElementById("myCanvas");
+                            var ctx = canvas.getContext("2d");
+                            ctx.drawImage(image, 0, 0, canvas.width, canvas.height);
+                        };
+                        image.src = e.target.result;
+                    }
+
+                    reader.readAsDataURL(input.files[0]);
                 }
+
             }
             else if (id == 'plus') {
-                if (parseInt(axistozoom) == 0)
-                {
+                if (parseInt(axistozoom) == 0) {
                     // canvas.height += 10;
                     img.onload = function () {
                         canvas.height += 10;
                         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
                     }
                 }
-                else if (parseInt(axistozoom) == 1)
-                {
+                else if (parseInt(axistozoom) == 1) {
                     //canvas.width += 10;
                     img.onload = function () {
                         canvas.width += 10;
@@ -307,17 +334,16 @@
                     }
 
                 }
-                else if (parseInt(axistozoom) == 2)
-                {
+                else if (parseInt(axistozoom) == 2) {
                     img.onload = function () {
                         canvas.height += 10;
                         canvas.width += 10;
-                        ctx.drawImage(img, 0, 0,canvas.width, canvas.height);
+                        ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
                     }
                     //canvas.width += 10;
                     //canvas.height += 10;
                 }
-                
+
             }
             else if (id == 'minus') {
                 if (parseInt(axistozoom) == 0) {
@@ -328,7 +354,7 @@
                 }
                 else if (parseInt(axistozoom) == 1) {
                     img.onload = function () {
-                     
+
                         canvas.width -= 10;
                         ctx.drawImage(img, 0, 0, canvas.width, canvas.height);
                     }
@@ -344,7 +370,7 @@
             }
             //showfile();
         }
-      
+
         function findPos(obj) {
             var curleft = 0, curtop = 0;
             if (obj.offsetParent) {
@@ -384,18 +410,21 @@
             showfile();
 
         }
-       
-        function rotateCanvas()
-        {
+
+        function rotateCanvas() {
             var i = 0;
             var canvas = document.getElementById('myCanvas');
+
             //canvas.height = canvas.width;
             var context = canvas.getContext('2d');
-           // var heightc = canvas.height;
-           // canvas.height = canvas.width;
-           // canvas.width = heightc
+            // var heightc = canvas.height;
+            // canvas.height = canvas.width;
+            // canvas.width = heightc
             var img = new Image();
             img.src = canvas.toDataURL();
+             //var heightc = canvas.height;
+             //canvas.height = canvas.width;
+             //canvas.width = heightc
             //context.save();
             //context.translate(50, 50);
             //context.rotate(2 / 180 / Math.PI);
@@ -404,18 +433,20 @@
             //i += 10;
 
             var degrees = 90;
+            // context.clearRect(0, 0, canvas.width, canvas.height);
            // context.clearRect(0, 0, canvas.width, canvas.height);
             context.save();
-      
+            context.clearRect(0, 0, canvas.width, canvas.height);   
             context.translate(canvas.width / 2, canvas.height / 2);
             context.rotate(degrees * Math.PI / 180);
-            context.drawImage(img, -img.width/2 , -img.height/2);
+            
+            context.drawImage(img, -img.width / 2, -img.height / 2, img.width, img.height);
             context.restore();
 
-           
-           // showfile();
+
+            // showfile();
         }
-        
+
         //function point(x, y, canvas) {
         //    canvas.beginPath();
         //    canvas.arc(x, y, 1, 0, 2 * Math.PI, true);
@@ -423,7 +454,7 @@
         //}
 
         /////////////////////Zoom Image in canvas
-      
+
         //var gkhead = new Image;
 
         //window.onload = function () {
@@ -589,13 +620,15 @@
                         </select>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-3">
+                <div class="col-lg-3 col-md-4">
                     <div class="btn-group">
                         <a href="#" id="minus" class="btn btn-danger btn-sm" onclick="Zoom_in_out(this.id)" title="Zoon Out"><span class="glyphicon glyphicon-zoom-out"></span></a>
-                        <a href="#" id="reset" class="btn btn-warning btn-sm" onclick="Zoom_in_out(this.id)" title="Reload"><span class="glyphicon glyphicon-repeat"></span></a>
+                        <a href="#" id="reset" class="btn btn-warning btn-sm" onclick="Zoom_in_out(this.id)" title="Reload Image"><span class="glyphicon glyphicon-repeat"></span></a>
                         <a href="#" id="resetr" class="btn btn-primary btn-sm" onclick="redraw()" title="Refresh Canvas"><span class="glyphicon glyphicon-refresh"></span></a>
                         <a href="#" id="plus" class="btn btn-success btn-sm" onclick="Zoom_in_out(this.id)" title="Zoon In"><span class="glyphicon glyphicon-zoom-in"></span></a>
                         <a href="#" id="rotate" class="btn btn-info btn-sm" onclick="rotateCanvas()" title="Rotate 90 Clock Wise"><span class="glyphicon glyphicon-retweet"></span></a>
+                        <a href="#" id="btnpaint" class="btn btn-danger btn-sm" title="Paint Now"><span class="glyphicon glyphicon-pencil"></span></a>
+
                     </div>
                 </div>
                 <div class="col-lg-2 col-md-3">
@@ -604,7 +637,7 @@
                             <div class="span6">
                                 <div class="input-group myColorPicker">
                                     <span class="input-group-addon myColorPicker-preview">&nbsp;</span>
-                                    <input type="text" id="txtpaintcolor"  class="form-control" />
+                                    <input type="text" id="txtpaintcolor" class="form-control" />
                                 </div>
                             </div>
                             <div class="span6">
