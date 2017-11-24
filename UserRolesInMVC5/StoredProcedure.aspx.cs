@@ -19,6 +19,39 @@ namespace HospMgmt
         {
 
         }
+
+        protected void btnCreate_Click(object sender, EventArgs e)
+        {
+            string connstr = ConfigurationManager.ConnectionStrings["DefaultConnection"].ConnectionString;
+            using (SqlConnection conn = new SqlConnection(connstr))
+            {
+                using (SqlCommand cmd = new SqlCommand())
+                {
+                    cmd.Parameters.Add("@userName",DbType.String).Value= TextBox_user_name.Text;
+                    cmd.Parameters.Add("@Password",DbType.String).Value=TextBox_password.Text;
+                    cmd.Connection = conn;
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    conn.Open();
+                    cmd.CommandText = "insert_login_proc";
+                    if(Convert.ToInt16(cmd.ExecuteNonQuery())>0)
+                    {
+                        lblmessage.Text = "Successfully Savedd!...";
+                    }
+                    else
+                    {
+                        lblmessage.Text = "Unable to save...";
+                    }
+                }
+            }
+            
+
+        }
+
+        protected void btnUpdate_Click(object sender, EventArgs e)
+        {
+
+        }
+
         protected void btn_login_Click(object sender, EventArgs e)
         {
             UserName = new SqlParameter();
