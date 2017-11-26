@@ -1,6 +1,7 @@
 namespace HospMgmt.Migrations
 {
     using System;
+    using System.Configuration;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
@@ -9,8 +10,11 @@ namespace HospMgmt.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
-            //SetSqlGenerator("MySql.Data.MySqlClient", new MySql.Data.Entity.MySqlMigrationSqlGenerator());
+            AutomaticMigrationsEnabled = true;
+            if (!Convert.ToBoolean(ConfigurationManager.AppSettings["ismssql"]))
+            {
+                SetSqlGenerator("MySql.Data.MySqlClient", new MySql.Data.Entity.MySqlMigrationSqlGenerator());
+            }
         }
 
         protected override void Seed(HospMgmt.Models.ApplicationDbContext context)

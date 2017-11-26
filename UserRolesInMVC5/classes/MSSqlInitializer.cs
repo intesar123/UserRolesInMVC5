@@ -8,7 +8,7 @@ using System.Web;
 
 namespace HospMgmt
 {
-    public class MySqlInitializer : IDatabaseInitializer<ApplicationDbContext>
+    public class MSSqlInitializer : IDatabaseInitializer<ApplicationDbContext>
     {
         public void InitializeDatabase(ApplicationDbContext context)
         {

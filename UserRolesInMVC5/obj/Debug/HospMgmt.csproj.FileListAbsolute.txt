@@ -69,9 +69,6 @@ c:\users\intesaralam\documents\visual studio 2015\Projects\HospMgmt\obj\Debug\Ho
 c:\users\intesaralam\documents\visual studio 2015\Projects\HospMgmt\obj\Debug\HospMgmt.pdb
 C:\Users\intesarAlam\Documents\Visual Studio 2015\Projects\HospMgmt\obj\Debug\HospMgmt.Migrations.InitialCreate.resources
 C:\Users\intesarAlam\Documents\Visual Studio 2015\Projects\HospMgmt\obj\Debug\HospMgmt.csproj.GenerateResource.Cache
-C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\obj\Debug\HospMgmt.Migrations.InitialCreate.resources
-C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\obj\Debug\HospMgmt.Migrations.addfnamefield.resources
-C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\obj\Debug\HospMgmt.csproj.GenerateResource.Cache
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\HospMgmt.dll.config
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\HospMgmt.dll
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\HospMgmt.pdb

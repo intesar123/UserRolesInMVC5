@@ -29,10 +29,15 @@ namespace HospMgmt.Models
         public ApplicationDbContext()
             : base("DefaultConnection", throwIfV1Schema: false)
         {
-            if (!Convert.ToBoolean(ConfigurationManager.AppSettings["ismssql"]))
-            {
+            //if (Convert.ToBoolean(ConfigurationManager.AppSettings["ismssql"]))
+            //{
+            //    //   Database.SetInitializer(new MSSqlInitializer());
+            //    Database.SetInitializer(new MySqlInitializer());
+            //}
+            //else
+            //{
                 Database.SetInitializer(new MySqlInitializer());
-            }
+           // }
         }
 
         public static ApplicationDbContext Create()

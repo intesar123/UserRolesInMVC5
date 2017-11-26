@@ -250,14 +250,6 @@
     <Compile Include="Index.aspx.designer.cs">
       <DependentUpon>Index.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201610301538522_InitialCreate.cs" />
-    <Compile Include="Migrations\201610301538522_InitialCreate.Designer.cs">
-      <DependentUpon>201610301538522_InitialCreate.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201710271623138_addfnamefield.cs" />
-    <Compile Include="Migrations\201710271623138_addfnamefield.Designer.cs">
-      <DependentUpon>201710271623138_addfnamefield.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -491,12 +483,6 @@
     <None Include="Project_Readme.html" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201610301538522_InitialCreate.resx">
-      <DependentUpon>201610301538522_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201710271623138_addfnamefield.resx">
-      <DependentUpon>201710271623138_addfnamefield.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="reports\Crosstabtest.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Crosstabtest.cs</LastGenOutput>
