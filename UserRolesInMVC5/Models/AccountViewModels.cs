@@ -54,6 +54,8 @@ namespace HospMgmt.Models
        // [EmailAddress]
         public string UserName { get; set; }
 
+       
+
         [Required]
         [DataType(DataType.Password)]
         [Display(Name = "Password")]
@@ -71,6 +73,10 @@ namespace HospMgmt.Models
         [Required]
         [Display(Name = "User Name")]
         public string UserName { get; set; }
+
+        [Display(Name = "Full Name")]
+        public string FullName { get; set; }
+
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]

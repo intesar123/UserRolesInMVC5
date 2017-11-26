@@ -205,3 +205,4 @@ C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\zh-Han
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\bin\zh-Hant\Microsoft.SqlServer.Types.resources.dll
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\obj\Debug\HospMgmt.dll
 C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\obj\Debug\HospMgmt.pdb
+C:\Users\intesarAlam\Documents\GitHub\UserRolesInMVC5\UserRolesInMVC5\obj\Debug\HospMgmt.csprojResolveAssemblyReference.cache
