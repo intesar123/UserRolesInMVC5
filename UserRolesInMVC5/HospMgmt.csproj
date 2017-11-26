@@ -255,6 +255,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MobAppointment.cs" />
+    <Compile Include="Models\MobAppointmentInitializer .cs" />
     <Compile Include="Progressbar.aspx.cs">
       <DependentUpon>Progressbar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

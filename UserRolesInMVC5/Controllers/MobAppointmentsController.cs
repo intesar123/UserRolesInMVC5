@@ -17,18 +17,17 @@ namespace HospMgmt.Controllers
         // GET: MobAppointments
         public ActionResult Index()
         {
-            return View(db.mvctest.ToList());
+            return View(db.MobAppointment.ToList());
         }
 
         // GET: MobAppointments/Details/5
-        
         public ActionResult Details(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            MobAppointment mobAppointment = db.mvctest.Find(id);
+            MobAppointment mobAppointment = db.MobAppointment.Find(id);
             if (mobAppointment == null)
             {
                 return HttpNotFound();
@@ -47,19 +46,17 @@ namespace HospMgmt.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "id,mobnum,isverified")] MobAppointment mobAppointment)
+        public ActionResult Create([Bind(Include = "id,mobnum,isverified,isdcode")] MobAppointment mobAppointment)
         {
             if (ModelState.IsValid)
             {
-                db.mvctest.Add(mobAppointment);
+                db.MobAppointment.Add(mobAppointment);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
 
             return View(mobAppointment);
         }
-
-
 
         // GET: MobAppointments/Edit/5
         public ActionResult Edit(int? id)
@@ -68,7 +65,7 @@ namespace HospMgmt.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            MobAppointment mobAppointment = db.mvctest.Find(id);
+            MobAppointment mobAppointment = db.MobAppointment.Find(id);
             if (mobAppointment == null)
             {
                 return HttpNotFound();
@@ -81,7 +78,7 @@ namespace HospMgmt.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "id,mobnum,isverified")] MobAppointment mobAppointment)
+        public ActionResult Edit([Bind(Include = "id,mobnum,isverified,isdcode")] MobAppointment mobAppointment)
         {
             if (ModelState.IsValid)
             {
@@ -93,14 +90,13 @@ namespace HospMgmt.Controllers
         }
 
         // GET: MobAppointments/Delete/5
-        [Authorize(Roles = "Admin")]
         public ActionResult Delete(int? id)
         {
             if (id == null)
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            MobAppointment mobAppointment = db.mvctest.Find(id);
+            MobAppointment mobAppointment = db.MobAppointment.Find(id);
             if (mobAppointment == null)
             {
                 return HttpNotFound();
@@ -113,8 +109,8 @@ namespace HospMgmt.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            MobAppointment mobAppointment = db.mvctest.Find(id);
-            db.mvctest.Remove(mobAppointment);
+            MobAppointment mobAppointment = db.MobAppointment.Find(id);
+            db.MobAppointment.Remove(mobAppointment);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

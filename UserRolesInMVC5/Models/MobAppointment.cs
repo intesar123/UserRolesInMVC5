@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Data.Entity;
+using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
 using System.Web;
 
@@ -20,6 +21,13 @@ namespace HospMgmt.Models
 
     public class AppointmentDbContext : DbContext
     {
-        public DbSet<MobAppointment> mvctest { get; set; }
+        public AppointmentDbContext():base("DefaultConnection")//specify the connection
+        {
+        }
+        public DbSet<MobAppointment> MobAppointment { get; set; }
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+        }
     }
 }
