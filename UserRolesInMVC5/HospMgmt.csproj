@@ -145,6 +145,14 @@
       <HintPath>packages\Newtonsoft.Json.10.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Oracle.ManagedDataAccess, Version=4.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>packages\Oracle.ManagedDataAccess.12.2.1100\lib\net40\Oracle.ManagedDataAccess.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Oracle.ManagedDataAccess.EntityFramework, Version=6.122.1.0, Culture=neutral, PublicKeyToken=89b483f429c47342, processorArchitecture=MSIL">
+      <HintPath>packages\Oracle.ManagedDataAccess.EntityFramework.12.2.1100\lib\net45\Oracle.ManagedDataAccess.EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Owin">
       <HintPath>packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
       <Private>True</Private>
@@ -225,7 +233,6 @@
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
-    <Compile Include="Controllers\MobAppointmentsController.cs" />
     <Compile Include="Controllers\RoleController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="CrossTabExample.aspx.cs">
@@ -255,7 +262,6 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MobAppointment.cs" />
-    <Compile Include="Models\MobAppointmentInitializer .cs" />
     <Compile Include="Progressbar.aspx.cs">
       <DependentUpon>Progressbar.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -420,14 +426,14 @@
     <Content Include="StoredProcedure.aspx" />
     <Content Include="timeEx.aspx" />
     <Content Include="TransparentImage.aspx" />
-    <Content Include="Web.config">
+    <Content Include="Web11.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Web.Debug.config">
-      <DependentUpon>Web.config</DependentUpon>
+    <Content Include="Web11.Debug.config">
+      <DependentUpon>Web11.config</DependentUpon>
     </Content>
-    <Content Include="Web.Release.config">
-      <DependentUpon>Web.config</DependentUpon>
+    <Content Include="Web11.Release.config">
+      <DependentUpon>Web11.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
     <Content Include="Views\_ViewStart.cshtml" />
@@ -466,14 +472,23 @@
     <Content Include="Views\Role\Create.cshtml" />
     <Content Include="Scripts\jquery-3.2.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.2.1.min.map" />
-    <Content Include="Web1.config">
+    <Content Include="Web2.config">
       <SubType>Designer</SubType>
     </Content>
-    <Content Include="Web1.Debug.config">
-      <DependentUpon>Web1.config</DependentUpon>
+    <Content Include="Web2.Debug.config">
+      <DependentUpon>Web2.config</DependentUpon>
     </Content>
-    <Content Include="Web1.Release.config">
-      <DependentUpon>Web1.config</DependentUpon>
+    <Content Include="Web2.Release.config">
+      <DependentUpon>Web2.config</DependentUpon>
+    </Content>
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
     </Content>
   </ItemGroup>
   <ItemGroup>
@@ -491,6 +506,12 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Repositories\Repositories\Repositories.csproj">
+      <Project>{BD22CF40-DAFB-47F7-9514-9321BABC4A61}</Project>
+      <Name>Repositories</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -14,12 +14,12 @@ namespace HospMgmt
             if (!Convert.ToBoolean(ConfigurationManager.AppSettings["ismssql"]))
             {
                 SetHistoryContext(
-            "MySql.Data.MySqlClient", (conn, schema) => new MySqlHistoryContext(conn, schema));
+            "Oracle.ManagedDataAccess.Client", (conn, schema) => new MySqlHistoryContext(conn, schema));
             }
             else
             {
                 SetHistoryContext(
-           "System.Data.SqlClient", (conn, schema) => new MySqlHistoryContext(conn, schema));
+           "Oracle.ManagedDataAccess.Client", (conn, schema) => new MySqlHistoryContext(conn, schema));
             }
         }
     }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Repositories;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
@@ -14,6 +15,7 @@ namespace MachineTest
     {
         protected void Page_Load(object sender, EventArgs e)
         {
+            DataTable dttt = Repository.getTable("Select * from aspnetusers","Users");
             if (!IsPostBack)
             {
                 lstcountry.DataSource = getCountry("");

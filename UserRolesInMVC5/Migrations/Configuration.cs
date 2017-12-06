@@ -15,6 +15,10 @@ namespace HospMgmt.Migrations
             {
                 SetSqlGenerator("MySql.Data.MySqlClient", new MySql.Data.Entity.MySqlMigrationSqlGenerator());
             }
+            else
+            {
+                //SetSqlGenerator("Oracle.ManagedDataAccess.Client", new System.Data.Entity.Migrations());
+            }
         }
 
         protected override void Seed(HospMgmt.Models.ApplicationDbContext context)
